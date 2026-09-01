@@ -1,6 +1,6 @@
 USE [MySystem]
 GO
-/****** Object:  StoredProcedure [dbo].[DeleteUser]    Script Date: 01/09/2026 11:40:22 AM ******/
+/****** Object:  StoredProcedure [dbo].[DeleteUser]    Script Date: 01/09/2026 11:42:28 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -11,7 +11,7 @@ as
 begin Try 
 IF NOT EXISTS (SELECT 1 FROM Users WHERE UserID = @ID)
     BEGIN
-        RAISERROR('error', 16, 1);
+        RAISERROR('error accured', 16, 1);
         RETURN;
     END
 delete from Users Where UserID = @ID
@@ -21,7 +21,7 @@ BEGIN CATCH
     SELECT ERROR_MESSAGE() AS ErrorMessage;
 END CATCH;
 GO
-/****** Object:  StoredProcedure [dbo].[GetUsers]    Script Date: 01/09/2026 11:40:22 AM ******/
+/****** Object:  StoredProcedure [dbo].[GetUsers]    Script Date: 01/09/2026 11:42:28 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -103,7 +103,7 @@ BEGIN CATCH
         SELECT ERROR_MESSAGE() AS ErrorMessage;
     END CATCH;
 GO
-/****** Object:  StoredProcedure [dbo].[InsertUpdateUser]    Script Date: 01/09/2026 11:40:22 AM ******/
+/****** Object:  StoredProcedure [dbo].[InsertUpdateUser]    Script Date: 01/09/2026 11:42:28 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
