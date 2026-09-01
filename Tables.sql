@@ -1,6 +1,6 @@
 USE [MySystem]
 GO
-/****** Object:  Table [dbo].[ProcedureVersionLog]    Script Date: 01/09/2026 12:40:16 PM ******/
+/****** Object:  Table [dbo].[ProcedureVersionLog]    Script Date: 01/09/2026 12:41:08 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19,7 +19,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Users]    Script Date: 01/09/2026 12:40:16 PM ******/
+/****** Object:  Table [dbo].[Users]    Script Date: 01/09/2026 12:41:08 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -29,7 +29,7 @@ CREATE TABLE [dbo].[Users](
 	[Username] [varchar](50) NOT NULL,
 	[Email] [varchar](100) NOT NULL,
 	[PasswordHash] [varchar](255) NOT NULL,
-	[FirstName] [varchar](50) NULL,
+	[FirstName] [varchar](50) NOT NULL,
 	[LastName] [varchar](50) NULL,
 	[IsActive] [bit] NULL,
 	[CreatedAt] [datetime2](7) NULL,
