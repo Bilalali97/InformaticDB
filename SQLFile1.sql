@@ -34,6 +34,6 @@ ALTER Proc [dbo].[InsertUpdateUser]
 	 END TRY
     BEGIN CATCH
 
-        PRINT 'Error';
+        PRINT 'Errorrrrrrr';
         SELECT ERROR_MESSAGE() AS ErrorMessage;
     END CATCH
